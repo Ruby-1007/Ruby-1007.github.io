@@ -38,7 +38,7 @@ const itemUrl = (platform, item, title) => {
     const token = deep(item, ["xsec_token","xsecToken"]);
     if (/^[a-f0-9]{24}$/i.test(noteId)) {
       const base = `https://www.xiaohongshu.com/explore/${noteId}`;
-      return token ? `${base}?xsec_token=${encodeURIComponent(token)}&xsec_source=pc_search` : base;
+      return token ? `${base}?xsec_token=${encodeURIComponent(token)}&xsec_source=pc_search&source=web_search_result_notes` : searchUrl(platform,title);
     }
     const raw = deep(item, ["share_url","note_url","web_url","jump_url","link"]);
     if (/^https?:\/\//.test(raw)) return raw;
@@ -59,13 +59,20 @@ const parseTikHub = (platform, json, limit = 20, directOnly = false) => {
     return true;
   }).map(item => {
     const title = clean(value(item, titleKeys));
+    const likes = Number(deep(item,["liked_count","like_count","likes"])||0);
+    const collects = Number(deep(item,["collected_count","collect_count","collects"])||0);
+    const comments = Number(deep(item,["comment_count","comments"])||0);
+    const shares = Number(deep(item,["share_count","shares"])||0);
+    const views = Number(deep(item,["view_count","views","play_count"])||0);
     return {
       platform, title,
-      heat: value(item, ["hot_value","hot","hot_score","score","view_count","views","liked_count","like_count","collect_count","comment_count"]) || "实时",
+      heat: deep(item, ["hot_value","hot","hot_score","score","view_count","views","liked_count","like_count","collect_count","comment_count"]) || "实时",
+      metrics:{likes,collects,comments,shares,views},
+      engagement:likes+collects*1.5+comments*2+shares*2,
       url: itemUrl(platform, item, title),
     };
   }).filter(item => !directOnly || (
-    platform === "小红书" ? /xiaohongshu\.com\/explore\/[a-f0-9]{24}/i.test(item.url) :
+    platform === "小红书" ? /xiaohongshu\.com\/explore\/[a-f0-9]{24}.+xsec_token=/i.test(item.url) :
     platform === "抖音" ? /douyin\.com\/video\/\d+/.test(item.url) :
     /weibo\.com\/.+\/[A-Za-z0-9]+/.test(item.url)
   )).slice(0, limit).map((item,index)=>({...item,rank:index+1}));
@@ -107,11 +114,13 @@ async function feed(url, source, cat, limit = 4) {
   } catch (error) { console.error(error.message); return []; }
 }
 const googleNews = q => `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans`;
-const [xhsPage1,xhsPage2,douyin,weibo,...newsGroups] = await Promise.all([
+const [xhsPage1,xhsPage2,xhsPage3,douyinHot,douyinChallenge,weibo,...newsGroups] = await Promise.all([
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=",20),
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=1",20),
-  tikhub("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_challenge_list?page=1&page_size=20",20),
-  tikhub("微博","https://api.tikhub.io/api/v1/weibo/web_v2/fetch_hot_search_index",20),
+  tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=2",20),
+  tikhub("抖音","https://api.tikhub.io/api/v1/douyin/app/v3/fetch_hot_search_list?board_type=0&board_sub_type=",50),
+  tikhub("抖音","https://api.tikhub.io/api/v1/douyin/app/v3/fetch_hot_search_list?board_type=2&board_sub_type=hotspot_challenge",50),
+  tikhub("微博","https://api.tikhub.io/api/v1/weibo/web_v2/fetch_hot_search_index",50),
   feed("https://www.chinadaily.com.cn/rss/china_rss.xml","中国日报","中国",4),
   feed("https://36kr.com/feed-newsflash","36氪","科技商业",4),
   feed(googleNews('"杭州日报" when:1d'),"杭州日报","杭州",3),
@@ -120,16 +129,23 @@ const [xhsPage1,xhsPage2,douyin,weibo,...newsGroups] = await Promise.all([
   feed("https://www.chinanews.com.cn/rss/scroll-news.xml","中国新闻网","综合",3),
 ]);
 const seenXhs = new Set();
-const xiaohongshu = [...xhsPage1,...xhsPage2].filter(x=>!seenXhs.has(x.title)&&seenXhs.add(x.title)).slice(0,20).map((x,i)=>({...x,rank:i+1}));
-const xhsKeyword = xiaohongshu[0]?.title || "生活";
-const [xhsViral,douyinViral] = await Promise.all([
-  tikhub("小红书",`https://api.tikhub.io/api/v1/xiaohongshu/app_v2/search_notes?keyword=${encodeURIComponent(xhsKeyword)}&page=1&sort_type=popularity_descending&note_type=%E4%B8%8D%E9%99%90&time_filter=%E4%B8%80%E5%91%A8%E5%86%85`,20,true),
+const xiaohongshu = [...xhsPage1,...xhsPage2,...xhsPage3].filter(x=>!seenXhs.has(x.title)&&seenXhs.add(x.title)).slice(0,50).map((x,i)=>({...x,rank:i+1}));
+const douyinHotRanked = douyinHot.map((x,i)=>({...x,board:"热点榜",rank:i+1}));
+const douyinChallengeRanked = douyinChallenge.map((x,i)=>({...x,board:"挑战榜",rank:i+1}));
+const xhsKeywords = [...new Set(xiaohongshu.slice(0,3).map(x=>x.title))];
+if (!xhsKeywords.length) xhsKeywords.push("生活","职场","成长");
+const [xhsIdeaGroups,douyinViral] = await Promise.all([
+  Promise.all(xhsKeywords.map(keyword=>tikhub("小红书",`https://api.tikhub.io/api/v1/xiaohongshu/app_v2/search_notes?keyword=${encodeURIComponent(keyword)}&page=1&sort_type=popularity_descending&note_type=%E4%B8%8D%E9%99%90&time_filter=%E4%B8%80%E5%91%A8%E5%86%85`,20,true))),
   tikhubPost("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_video_list",{page:1,page_size:20,date_window:24,sub_type:1001,keyword:"",tags:[]},20,true),
 ]);
+const seenXhsIdeas = new Set();
+const xhsIdeas = xhsIdeaGroups.flat().filter(x=>!seenXhsIdeas.has(x.url)&&seenXhsIdeas.add(x.url)).slice(0,50).map((x,i)=>({...x,rank:i+1}));
+const xhsViral = xhsIdeaGroups[0]||[];
 const seenNews = new Set();
 const newsItems = newsGroups.flat().filter(x=>!seenNews.has(x.title)&&seenNews.add(x.title)).slice(0,20);
-const viral = [...xhsViral,...douyinViral];
-const payload = { fetchedAt:new Date().toISOString(), hot:[...xiaohongshu,...douyin,...weibo], viral, news:newsItems, status:{xiaohongshu:!!xiaohongshu.length,douyin:!!douyin.length,weibo:!!weibo.length,viral:!!viral.length,news:!!newsItems.length} };
+const rankedXhsViral = [...xhsViral].sort((a,b)=>b.engagement-a.engagement).map((x,i)=>({...x,rank:i+1,rankingBasis:"一周内按点赞与互动筛选"}));
+const viral = [...rankedXhsViral,...douyinViral];
+const payload = { fetchedAt:new Date().toISOString(), hot:[...xhsIdeas,...douyinHotRanked,...douyinChallengeRanked,...weibo], viral, news:newsItems, status:{xiaohongshu:!!xhsIdeas.length,douyin:!!(douyinHot.length||douyinChallenge.length),weibo:!!weibo.length,viral:!!viral.length,news:!!newsItems.length} };
 await mkdir("data",{recursive:true});
 await writeFile("data/live.json",JSON.stringify(payload,null,2)+"\n");
 console.log(`Saved ${payload.hot.length} topics, ${payload.viral.length} viral works and ${payload.news.length} news items`);
