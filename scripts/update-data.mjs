@@ -3,7 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 const token = process.env.TIKHUB_API_KEY;
 if (!token) throw new Error("Missing TIKHUB_API_KEY repository secret");
 
-const titleKeys = ["title","word","keyword","sentence","name","note_title","display_name","desc","word_name","query"];
+const titleKeys = ["title","word","keyword","sentence","name","note_title","display_name","desc","word_name","query","challenge_name","hashtag_name"];
 const value = (obj, keys) => {
   for (const key of keys) if (typeof obj?.[key] === "string" || typeof obj?.[key] === "number") return String(obj[key]);
   return "";
@@ -77,7 +77,7 @@ async function news() {
 }
 const [xiaohongshu,douyin,weibo,newsItems] = await Promise.all([
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor="),
-  tikhub("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_list?page=1&page_size=10"),
+  tikhub("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_challenge_list?page=1&page_size=10"),
   tikhub("微博","https://api.tikhub.io/api/v1/weibo/web_v2/fetch_hot_search_index"),
   news(),
 ]);
