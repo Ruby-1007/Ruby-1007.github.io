@@ -50,28 +50,32 @@ const itemUrl = (platform, item, title) => {
   if (platform === "抖音" && id) return `https://www.douyin.com/video/${id}`;
   return searchUrl(platform, title);
 };
-const parseTikHub = (platform, json, limit = 20) => {
+const parseTikHub = (platform, json, limit = 20, directOnly = false) => {
   const seen = new Set();
   return collect(json.data).filter(item => {
     const title = clean(value(item, titleKeys));
     if (!title || seen.has(title)) return false;
     seen.add(title);
     return true;
-  }).slice(0, limit).map((item, index) => {
+  }).map(item => {
     const title = clean(value(item, titleKeys));
     return {
-      platform, rank: index + 1, title,
+      platform, title,
       heat: value(item, ["hot_value","hot","hot_score","score","view_count","views","liked_count","like_count","collect_count","comment_count"]) || "实时",
       url: itemUrl(platform, item, title),
     };
-  });
+  }).filter(item => !directOnly || (
+    platform === "小红书" ? /xiaohongshu\.com\/explore\/[a-f0-9]{24}/i.test(item.url) :
+    platform === "抖音" ? /douyin\.com\/video\/\d+/.test(item.url) :
+    /weibo\.com\/.+\/[A-Za-z0-9]+/.test(item.url)
+  )).slice(0, limit).map((item,index)=>({...item,rank:index+1}));
 };
-async function tikhub(platform, endpoint, limit = 20) {
+async function tikhub(platform, endpoint, limit = 20, directOnly = false) {
   try {
     const response = await fetch(endpoint, { headers: { Authorization: `Bearer ${token}`, Accept: "application/json" } });
     if (!response.ok) throw new Error(`${platform} ${response.status}`);
     const json = await response.json();
-    const items = parseTikHub(platform,json,limit);
+    const items = parseTikHub(platform,json,limit,directOnly);
     if (!items.length) console.error(`${platform} returned no parseable items; data keys: ${Object.keys(json?.data||{}).join(",")}`);
     return items;
   } catch (error) {
@@ -79,12 +83,12 @@ async function tikhub(platform, endpoint, limit = 20) {
     return [];
   }
 }
-async function tikhubPost(platform, endpoint, body, limit = 20) {
+async function tikhubPost(platform, endpoint, body, limit = 20, directOnly = false) {
   try {
     const response = await fetch(endpoint, {method:"POST",headers:{Authorization:`Bearer ${token}`,Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(body)});
     if (!response.ok) throw new Error(`${platform} viral ${response.status}`);
     const json = await response.json();
-    const items = parseTikHub(platform,json,limit);
+    const items = parseTikHub(platform,json,limit,directOnly);
     if (!items.length) console.error(`${platform} viral returned no parseable items; data keys: ${Object.keys(json?.data||{}).join(",")}`);
     return items;
   } catch (error) { console.error(error.message); return []; }
@@ -118,14 +122,13 @@ const [xhsPage1,xhsPage2,douyin,weibo,...newsGroups] = await Promise.all([
 const seenXhs = new Set();
 const xiaohongshu = [...xhsPage1,...xhsPage2].filter(x=>!seenXhs.has(x.title)&&seenXhs.add(x.title)).slice(0,20).map((x,i)=>({...x,rank:i+1}));
 const xhsKeyword = xiaohongshu[0]?.title || "生活";
-const [xhsViral,douyinViral,weiboViral] = await Promise.all([
-  tikhub("小红书",`https://api.tikhub.io/api/v1/xiaohongshu/app_v2/search_notes?keyword=${encodeURIComponent(xhsKeyword)}&page=1&sort_type=popularity_descending&note_type=%E4%B8%8D%E9%99%90&time_filter=%E4%B8%80%E5%91%A8%E5%86%85`,20),
-  tikhubPost("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_video_list",{page:1,page_size:20,date_window:24,sub_type:1001,keyword:"",tags:[]},20),
-  tikhub("微博","https://api.tikhub.io/api/v1/weibo/app/fetch_home_recommend_feed?page=1&count=20",20),
+const [xhsViral,douyinViral] = await Promise.all([
+  tikhub("小红书",`https://api.tikhub.io/api/v1/xiaohongshu/app_v2/search_notes?keyword=${encodeURIComponent(xhsKeyword)}&page=1&sort_type=popularity_descending&note_type=%E4%B8%8D%E9%99%90&time_filter=%E4%B8%80%E5%91%A8%E5%86%85`,20,true),
+  tikhubPost("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_video_list",{page:1,page_size:20,date_window:24,sub_type:1001,keyword:"",tags:[]},20,true),
 ]);
 const seenNews = new Set();
 const newsItems = newsGroups.flat().filter(x=>!seenNews.has(x.title)&&seenNews.add(x.title)).slice(0,20);
-const viral = [...xhsViral,...douyinViral,...weiboViral];
+const viral = [...xhsViral,...douyinViral];
 const payload = { fetchedAt:new Date().toISOString(), hot:[...xiaohongshu,...douyin,...weibo], viral, news:newsItems, status:{xiaohongshu:!!xiaohongshu.length,douyin:!!douyin.length,weibo:!!weibo.length,viral:!!viral.length,news:!!newsItems.length} };
 await mkdir("data",{recursive:true});
 await writeFile("data/live.json",JSON.stringify(payload,null,2)+"\n");
