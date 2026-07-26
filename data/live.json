@@ -1,11 +1,201 @@
 {
-  "fetchedAt": "2026-07-26T01:00:00.000Z",
-  "hot": [],
-  "news": [],
+  "fetchedAt": "2026-07-26T09:12:06.385Z",
+  "hot": [
+    {
+      "platform": "小红书",
+      "rank": 1,
+      "title": "王楚然互动说在我这边",
+      "heat": "24326066",
+      "url": "https://www.xiaohongshu.com/explore/57840811"
+    },
+    {
+      "platform": "小红书",
+      "rank": 2,
+      "title": "用蜂蜡做非遗蜡染",
+      "heat": "24040672",
+      "url": "https://www.xiaohongshu.com/explore/57842056"
+    },
+    {
+      "platform": "小红书",
+      "rank": 3,
+      "title": "王玉雯蹦极致毛细血管破裂",
+      "heat": "23225887",
+      "url": "https://www.xiaohongshu.com/explore/57841978"
+    },
+    {
+      "platform": "小红书",
+      "rank": 4,
+      "title": "用群像运镜打开八仙cos",
+      "heat": "22814032",
+      "url": "https://www.xiaohongshu.com/explore/57841803"
+    },
+    {
+      "platform": "小红书",
+      "rank": 5,
+      "title": "八仙结局隐藏的五层故事",
+      "heat": "22793709",
+      "url": "https://www.xiaohongshu.com/explore/57841947"
+    },
+    {
+      "platform": "小红书",
+      "rank": 6,
+      "title": "刘诗诗正式入驻小红书",
+      "heat": "22747698",
+      "url": "https://www.xiaohongshu.com/explore/57840603"
+    },
+    {
+      "platform": "小红书",
+      "rank": 7,
+      "title": "火鸡面冰淇淋披萨",
+      "heat": "22511706",
+      "url": "https://www.xiaohongshu.com/explore/57841995"
+    },
+    {
+      "platform": "小红书",
+      "rank": 8,
+      "title": "蛋仔疯人院隐藏打野点",
+      "heat": "22322432",
+      "url": "https://www.xiaohongshu.com/explore/57842067"
+    },
+    {
+      "platform": "小红书",
+      "rank": 9,
+      "title": "蛋仔新追捕少帅沈昭太帅了",
+      "heat": "22201732",
+      "url": "https://www.xiaohongshu.com/explore/57842022"
+    },
+    {
+      "platform": "小红书",
+      "rank": 10,
+      "title": "荷兰弟忘记牵赞达亚上红毯",
+      "heat": "22138331",
+      "url": "https://www.xiaohongshu.com/explore/57841172"
+    },
+    {
+      "platform": "微博",
+      "rank": 1,
+      "title": "总书记心系中华瑰宝",
+      "heat": "实时",
+      "url": "https://s.weibo.com/weibo?q=%E6%80%BB%E4%B9%A6%E8%AE%B0%E5%BF%83%E7%B3%BB%E4%B8%AD%E5%8D%8E%E7%91%B0%E5%AE%9D"
+    },
+    {
+      "platform": "微博",
+      "rank": 2,
+      "title": "滞销西瓜被网红压价到一毛多一斤",
+      "heat": "实时",
+      "url": "https://s.weibo.com/weibo?q=%E6%BB%9E%E9%94%80%E8%A5%BF%E7%93%9C%E8%A2%AB%E7%BD%91%E7%BA%A2%E5%8E%8B%E4%BB%B7%E5%88%B0%E4%B8%80%E6%AF%9B%E5%A4%9A%E4%B8%80%E6%96%A4"
+    },
+    {
+      "platform": "微博",
+      "rank": 3,
+      "title": "法院回应LV起诉开发商",
+      "heat": "实时",
+      "url": "https://s.weibo.com/weibo?q=%E6%B3%95%E9%99%A2%E5%9B%9E%E5%BA%94LV%E8%B5%B7%E8%AF%89%E5%BC%80%E5%8F%91%E5%95%86"
+    },
+    {
+      "platform": "微博",
+      "rank": 4,
+      "title": "神23乘组在轨已满60天",
+      "heat": "实时",
+      "url": "https://s.weibo.com/weibo?q=%E7%A5%9E23%E4%B9%98%E7%BB%84%E5%9C%A8%E8%BD%A8%E5%B7%B2%E6%BB%A160%E5%A4%A9"
+    },
+    {
+      "platform": "微博",
+      "rank": 5,
+      "title": "晚饭后最好的耗糖运动",
+      "heat": "实时",
+      "url": "https://s.weibo.com/weibo?q=%E6%99%9A%E9%A5%AD%E5%90%8E%E6%9C%80%E5%A5%BD%E7%9A%84%E8%80%97%E7%B3%96%E8%BF%90%E5%8A%A8"
+    },
+    {
+      "platform": "微博",
+      "rank": 6,
+      "title": "鹿晗 与我无关的事情",
+      "heat": "实时",
+      "url": "https://s.weibo.com/weibo?q=%E9%B9%BF%E6%99%97%20%E4%B8%8E%E6%88%91%E6%97%A0%E5%85%B3%E7%9A%84%E4%BA%8B%E6%83%85"
+    },
+    {
+      "platform": "微博",
+      "rank": 7,
+      "title": "白鹿开到荼蘼 田壮壮造型",
+      "heat": "实时",
+      "url": "https://s.weibo.com/weibo?q=%E7%99%BD%E9%B9%BF%E5%BC%80%E5%88%B0%E8%8D%BC%E8%98%BC%20%E7%94%B0%E5%A3%AE%E5%A3%AE%E9%80%A0%E5%9E%8B"
+    },
+    {
+      "platform": "微博",
+      "rank": 8,
+      "title": "奇瑞集团全球累计销量突破2000万",
+      "heat": "实时",
+      "url": "https://s.weibo.com/weibo?q=%E5%A5%87%E7%91%9E%E9%9B%86%E5%9B%A2%E5%85%A8%E7%90%83%E7%B4%AF%E8%AE%A1%E9%94%80%E9%87%8F%E7%AA%81%E7%A0%B42000%E4%B8%87"
+    },
+    {
+      "platform": "微博",
+      "rank": 9,
+      "title": "软孤立",
+      "heat": "实时",
+      "url": "https://s.weibo.com/weibo?q=%E8%BD%AF%E5%AD%A4%E7%AB%8B"
+    },
+    {
+      "platform": "微博",
+      "rank": 10,
+      "title": "把安装师傅都约同一天处处是惊喜",
+      "heat": "实时",
+      "url": "https://s.weibo.com/weibo?q=%E6%8A%8A%E5%AE%89%E8%A3%85%E5%B8%88%E5%82%85%E9%83%BD%E7%BA%A6%E5%90%8C%E4%B8%80%E5%A4%A9%E5%A4%84%E5%A4%84%E6%98%AF%E6%83%8A%E5%96%9C"
+    }
+  ],
+  "news": [
+    {
+      "cat": "要闻",
+      "title": "南部战区新闻发言人就菲律宾拉拢域外国家组织所谓“联合巡航”发表谈话",
+      "url": "https://www.chinanews.com.cn/gn/2026/07-26/10666839.shtml",
+      "brief": "南部战区新闻发言人翟士臣海军大校表示，7月26日，中国人民解放军南部战区组织海空力量位南海海域进行例行巡航。菲律宾拉拢域外国家组织所谓“联合巡航”，搅局南海，破坏地区和平稳定。战区部队将坚决捍卫国家领土主权和海洋权益，坚定维护地区和平稳定。"
+    },
+    {
+      "cat": "社会",
+      "title": "沙巴举办 “2026马中谊跑” 逾5000民众共赴友谊之约",
+      "url": "https://www.chinanews.com.cn/gj/2026/07-26/10666830.shtml",
+      "brief": "中新社马来西亚哥打基纳巴卢7月26日电(记者 刘育英)逾5000名民众26日参加在马来西亚沙巴州哥打基纳巴卢举行的“2026马中谊跑”，活动规模较去年进一步扩大。"
+    },
+    {
+      "cat": "世界",
+      "title": "京东买药秒送联合海王星辰、漱玉平民等多家连锁药店成立“24小时健康守护联盟”",
+      "url": "https://www.chinanews.com.cn/cj/2026/07-26/10666832.shtml",
+      "brief": "近日，京东买药秒送携手海王星辰、漱玉平民、益丰大药房、全亿健康、国大药房、为客大药房、祝强大药房、泉源堂、河北石药大药房等多家连锁药房，共同成立“24小时健康守护联盟”，并同步推出“夜间免费升级1对1急送”服务。联盟以“平台包运费、深夜不关店、骑手不绕路、正品"
+    },
+    {
+      "cat": "文化",
+      "title": "人工智能安全风险凸显 业内专家共议“让AI做成好事”",
+      "url": "https://www.chinanews.com.cn/sh/2026/07-26/10666833.shtml",
+      "brief": "中新网北京7月26日电 (记者 招嘉虹 刘远 孔任远)  7月25日，第二十八届中国科协年会“人工智能伦理与治理”专题论坛在北京举行。与会学者表示，缺乏安全约束的人工智能存在显著风险，人工智能伦理治理不仅在于“让AI不做坏事”，更在于“让AI做成好事”。"
+    },
+    {
+      "cat": "要闻",
+      "title": "“清代方志之冠”杨笃学术论坛山西举办",
+      "url": "https://www.chinanews.com.cn/sh/2026/07-26/10666829.shtml",
+      "brief": "中新社太原7月26日电 (记者 范丽芳)中国地方志与中华优秀传统文化论坛“方志名家杨笃的学术贡献与时代价值”分论坛26日在山西太原举办。"
+    },
+    {
+      "cat": "社会",
+      "title": "台风“红霞”裹挟风雨侵袭汕尾 当地持续开展抢险救灾",
+      "url": "https://www.chinanews.com.cn/sh/2026/07-26/10666828.shtml",
+      "brief": "中新网汕尾7月26日电 (记者 程景伟)今年第12号台风“红霞”于26日3时50分前后在广东省惠州市惠东县平海镇沿海登陆，其裹挟狂风暴雨而来，对周边的汕尾市带来严重影响，导致当地多处出现树木倒伏、道路积水、村居内涝。"
+    },
+    {
+      "cat": "世界",
+      "title": "四川眉山洪雅县玉屏山突发森林火灾 暂无人员伤亡",
+      "url": "https://www.chinanews.com.cn/sh/2026/07-26/10666834.shtml",
+      "brief": "7月26日14时30分左右，四川眉山洪雅县玉屏山附近突发森林火灾，当地立即组织消防、应急等救援部门前往处置。记者从当地宣传部门了解到，目前火势基本得到控制，初步排查无人员被困，暂无人员伤亡报告。"
+    },
+    {
+      "cat": "文化",
+      "title": "LV因四叶类雕花装饰起诉开发商？厦门湖里法院：不属实",
+      "url": "https://www.chinanews.com.cn/sh/2026/07-26/10666825.shtml",
+      "brief": "中新网7月26日电 据“湖里法院”微信公众号消息，7月26日，厦门市湖里区人民法院发布情况通报称，针对近日网络流传的(2026)闽0206民初8217号案件相关信息，网传案情“路易威登公司起诉地产开发商，因楼盘外立面四叶类雕花装饰商标侵权”不属实。"
+    }
+  ],
   "status": {
-    "xiaohongshu": false,
+    "xiaohongshu": true,
     "douyin": false,
-    "weibo": false,
-    "news": false
+    "weibo": true,
+    "news": true
   }
 }
