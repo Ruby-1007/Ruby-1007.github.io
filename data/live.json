@@ -1,0 +1,11 @@
+{
+  "fetchedAt": "2026-07-26T01:00:00.000Z",
+  "hot": [],
+  "news": [],
+  "status": {
+    "xiaohongshu": false,
+    "douyin": false,
+    "weibo": false,
+    "news": false
+  }
+}
