@@ -3,7 +3,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 const token = process.env.TIKHUB_API_KEY;
 if (!token) throw new Error("Missing TIKHUB_API_KEY repository secret");
 
-const titleKeys = ["title","word","keyword","sentence","name","note_title","display_name","desc","description","text","content","word_name","query","challenge_name","hashtag_name"];
+const titleKeys = ["title","word","keyword","sentence","name","note_title","display_name","desc","description","text","content","word_name","query","challenge_name","hashtag_name","aweme_desc","video_title","item_title","caption"];
 const value = (obj, keys) => {
   for (const key of keys) if (typeof obj?.[key] === "string" || typeof obj?.[key] === "number") return String(obj[key]);
   return "";
@@ -70,7 +70,10 @@ async function tikhub(platform, endpoint, limit = 20) {
   try {
     const response = await fetch(endpoint, { headers: { Authorization: `Bearer ${token}`, Accept: "application/json" } });
     if (!response.ok) throw new Error(`${platform} ${response.status}`);
-    return parseTikHub(platform,await response.json(),limit);
+    const json = await response.json();
+    const items = parseTikHub(platform,json,limit);
+    if (!items.length) console.error(`${platform} returned no parseable items; data keys: ${Object.keys(json?.data||{}).join(",")}`);
+    return items;
   } catch (error) {
     console.error(error.message);
     return [];
@@ -80,7 +83,10 @@ async function tikhubPost(platform, endpoint, body, limit = 20) {
   try {
     const response = await fetch(endpoint, {method:"POST",headers:{Authorization:`Bearer ${token}`,Accept:"application/json","Content-Type":"application/json"},body:JSON.stringify(body)});
     if (!response.ok) throw new Error(`${platform} viral ${response.status}`);
-    return parseTikHub(platform,await response.json(),limit);
+    const json = await response.json();
+    const items = parseTikHub(platform,json,limit);
+    if (!items.length) console.error(`${platform} viral returned no parseable items; data keys: ${Object.keys(json?.data||{}).join(",")}`);
+    return items;
   } catch (error) { console.error(error.message); return []; }
 }
 const clean = (s = "") => s.replace(/<!\[CDATA\[|\]\]>/g,"").replace(/<[^>]+>/g,"").replace(/&nbsp;/g," ").replace(/&amp;/g,"&").trim();
@@ -97,14 +103,11 @@ async function feed(url, source, cat, limit = 4) {
   } catch (error) { console.error(error.message); return []; }
 }
 const googleNews = q => `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans`;
-const [xhsPage1,xhsPage2,douyin,weibo,xhsViral,douyinViral,weiboViral,...newsGroups] = await Promise.all([
+const [xhsPage1,xhsPage2,douyin,weibo,...newsGroups] = await Promise.all([
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=",20),
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=1",20),
   tikhub("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_challenge_list?page=1&page_size=20",20),
   tikhub("微博","https://api.tikhub.io/api/v1/weibo/web_v2/fetch_hot_search_index",20),
-  tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/web_v3/fetch_homefeed?num=20&category=homefeed_recommend",20),
-  tikhubPost("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_video_list",{page:1,page_size:20,date_window:24,sub_type:1001,keyword:"",tags:[]},20),
-  tikhub("微博","https://api.tikhub.io/api/v1/weibo/web/fetch_search?keyword=%E7%83%AD%E9%97%A8&page=1&search_type=60&time_scope=day",20),
   feed("https://www.chinadaily.com.cn/rss/china_rss.xml","中国日报","中国",4),
   feed("https://36kr.com/feed-newsflash","36氪","科技商业",4),
   feed(googleNews('"杭州日报" when:1d'),"杭州日报","杭州",3),
@@ -114,6 +117,12 @@ const [xhsPage1,xhsPage2,douyin,weibo,xhsViral,douyinViral,weiboViral,...newsGro
 ]);
 const seenXhs = new Set();
 const xiaohongshu = [...xhsPage1,...xhsPage2].filter(x=>!seenXhs.has(x.title)&&seenXhs.add(x.title)).slice(0,20).map((x,i)=>({...x,rank:i+1}));
+const xhsKeyword = xiaohongshu[0]?.title || "生活";
+const [xhsViral,douyinViral,weiboViral] = await Promise.all([
+  tikhub("小红书",`https://api.tikhub.io/api/v1/xiaohongshu/app_v2/search_notes?keyword=${encodeURIComponent(xhsKeyword)}&page=1&sort_type=popularity_descending&note_type=%E4%B8%8D%E9%99%90&time_filter=%E4%B8%80%E5%91%A8%E5%86%85`,20),
+  tikhubPost("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_video_list",{page:1,page_size:20,date_window:24,sub_type:1001,keyword:"",tags:[]},20),
+  tikhub("微博","https://api.tikhub.io/api/v1/weibo/app/fetch_home_recommend_feed?page=1&count=20",20),
+]);
 const seenNews = new Set();
 const newsItems = newsGroups.flat().filter(x=>!seenNews.has(x.title)&&seenNews.add(x.title)).slice(0,20);
 const viral = [...xhsViral,...douyinViral,...weiboViral];
