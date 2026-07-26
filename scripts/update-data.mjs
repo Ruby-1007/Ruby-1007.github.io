@@ -35,9 +35,17 @@ const searchUrl = (platform, title) => platform === "微博"
 const itemUrl = (platform, item, title) => {
   const raw = deep(item, ["share_url","note_url","web_url","jump_url","scheme","word_scheme","url","link"]);
   if (/^https?:\/\//.test(raw)) return raw;
-  const id = deep(item, ["note_id","aweme_id","item_id","id"]);
+  if (platform === "小红书") {
+    const noteId = deep(item, ["note_id"]);
+    const token = deep(item, ["xsec_token"]);
+    if (/^[a-f0-9]{24}$/i.test(noteId)) {
+      const base = `https://www.xiaohongshu.com/explore/${noteId}`;
+      return token ? `${base}?xsec_token=${encodeURIComponent(token)}&xsec_source=pc_search` : base;
+    }
+    return searchUrl(platform, title);
+  }
+  const id = deep(item, ["aweme_id","item_id","id"]);
   if (platform === "抖音" && id) return `https://www.douyin.com/video/${id}`;
-  if (platform === "小红书" && id) return `https://www.xiaohongshu.com/explore/${id}`;
   return searchUrl(platform, title);
 };
 async function tikhub(platform, endpoint) {
