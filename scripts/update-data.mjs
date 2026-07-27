@@ -129,20 +129,22 @@ async function feed(url, source, cat, limit = 4) {
   } catch (error) { console.error(error.message); return []; }
 }
 const googleNews = q => `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans`;
-const beijingDate = Object.fromEntries(
-  new Intl.DateTimeFormat("zh-CN", {
+const billboardDate = date => {
+  const parts = Object.fromEntries(new Intl.DateTimeFormat("zh-CN", {
     timeZone: "Asia/Shanghai",
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
-  }).formatToParts(new Date()).map(({type,value}) => [type,value])
-);
-const douyinBillboardDate = `${beijingDate.year}${beijingDate.month}${beijingDate.day}`;
+  }).formatToParts(date).map(({type,value}) => [type,value]));
+  return `${parts.year}${parts.month}${parts.day}`;
+};
+const douyinBillboardEnd = billboardDate(new Date());
+const douyinBillboardStart = billboardDate(new Date(Date.now() - 7 * 86400000));
 const [xhsPage1,xhsPage2,xhsPage3,douyinHot,douyinChallenge,weibo,...newsGroups] = await Promise.all([
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=",20),
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=1",20),
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=2",20),
-  tikhub("抖音",`https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_list?page=1&page_size=50&type=range&start_date=${douyinBillboardDate}&end_date=${douyinBillboardDate}&sentence_tag=&keyword=`,50),
+  tikhub("抖音",`https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_list?page=1&page_size=50&type=range&start_date=${douyinBillboardStart}&end_date=${douyinBillboardEnd}&sentence_tag=&keyword=`,50),
   tikhub("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_challenge_list?page=1&page_size=50",50),
   tikhub("微博","https://api.tikhub.io/api/v1/weibo/web_v2/fetch_hot_search_index",50),
   feed("https://www.chinadaily.com.cn/rss/china_rss.xml","中国日报","中国",4),
