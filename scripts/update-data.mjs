@@ -37,14 +37,14 @@ const searchUrl = (platform, title) => platform === "微博"
     : `https://www.xiaohongshu.com/search_result?keyword=${encodeURIComponent(title)}&source=web_explore_feed`;
 const itemUrl = (platform, item, title) => {
   if (platform === "小红书") {
+    const raw = deep(item, ["share_url","note_url","web_url","jump_url","link"]);
+    if (/^https?:\/\//.test(raw)) return raw;
     const noteId = deep(item, ["note_id","id"]);
     const token = deep(item, ["xsec_token","xsecToken"]);
     if (/^[a-f0-9]{24}$/i.test(noteId)) {
       const base = `https://www.xiaohongshu.com/explore/${noteId}`;
       return token ? `${base}?xsec_token=${encodeURIComponent(token)}&xsec_source=pc_search&source=web_search_result_notes` : searchUrl(platform,title);
     }
-    const raw = deep(item, ["share_url","note_url","web_url","jump_url","link"]);
-    if (/^https?:\/\//.test(raw)) return raw;
     return searchUrl(platform, title);
   }
   const raw = deep(item, ["share_url","note_url","web_url","jump_url","scheme","word_scheme","url","link"]);
@@ -147,7 +147,7 @@ try { previous = JSON.parse(await readFile("data/live.json","utf8")); } catch {}
 const previousPlatform = platform => (previous.hot||[]).filter(x=>x.platform===platform);
 const douyinSnapshot = billboardTime(new Date());
 const [xhsPage1,xhsPage2,xhsPage3,douyinHot,douyinChallenge,weiboApp,weiboSummary,weiboIndex,weiboWeb,...newsGroups] = await Promise.all([
-  tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=",20),
+  tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=0",20),
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=1",20),
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=2",20),
   tikhub("抖音",`https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_list?page=1&page_size=50&type=snapshot&snapshot_time=${douyinSnapshot}&sentence_tag=&keyword=`,50),
