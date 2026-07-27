@@ -3,13 +3,16 @@ import { mkdir, writeFile } from "node:fs/promises";
 const token = process.env.TIKHUB_API_KEY;
 if (!token) throw new Error("Missing TIKHUB_API_KEY repository secret");
 
-const titleKeys = ["title","word","keyword","sentence","name","note_title","display_name","desc","description","text","content","word_name","query","challenge_name","hashtag_name","aweme_desc","video_title","item_title","caption"];
+const titleKeys = ["title","word","keyword","sentence","name","note_title","display_name","desc","description","text","content","word_name","query","challenge_name","hashtag_name","aweme_desc","video_title","item_title","caption","hot_sentence","sentence_name","sentence_text","hot_word","topic_name"];
 const value = (obj, keys) => {
   for (const key of keys) if (typeof obj?.[key] === "string" || typeof obj?.[key] === "number") return String(obj[key]);
   return "";
 };
 const collect = (input, out = []) => {
   if (Array.isArray(input)) input.forEach(x => collect(x, out));
+  else if (typeof input === "string" && /^[\[{]/.test(input.trim())) {
+    try { collect(JSON.parse(input), out); } catch {}
+  }
   else if (input && typeof input === "object") {
     const title = value(input, titleKeys);
     if (title.length >= 2 && title.length <= 160) out.push(input);
@@ -83,7 +86,19 @@ async function tikhub(platform, endpoint, limit = 20, directOnly = false) {
     if (!response.ok) throw new Error(`${platform} ${response.status}`);
     const json = await response.json();
     const items = parseTikHub(platform,json,limit,directOnly);
-    if (!items.length) console.error(`${platform} returned no parseable items; data keys: ${Object.keys(json?.data||{}).join(",")}`);
+    if (!items.length) {
+      const nestedKeys = new Set();
+      const inspectKeys = (input, depth = 0) => {
+        if (!input || typeof input !== "object" || depth > 5) return;
+        if (Array.isArray(input)) input.slice(0,3).forEach(x => inspectKeys(x,depth+1));
+        else {
+          Object.keys(input).forEach(key => nestedKeys.add(key));
+          Object.values(input).forEach(x => inspectKeys(x,depth+1));
+        }
+      };
+      inspectKeys(json?.data);
+      console.error(`${platform} returned no parseable items; nested keys: ${[...nestedKeys].slice(0,80).join(",")}`);
+    }
     return items;
   } catch (error) {
     console.error(error.message);
