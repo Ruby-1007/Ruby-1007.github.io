@@ -27,6 +27,7 @@ jobs:
         env:
           TIKHUB_API_KEY: ${{ secrets.TIKHUB_API_KEY }}
           UPDATE_SCOPE: douyin-hot
+          TIKHUB_DIAGNOSTICS: "1"
         run: node scripts/update-data.mjs
       - name: 保存并发布抖音榜单
         run: |

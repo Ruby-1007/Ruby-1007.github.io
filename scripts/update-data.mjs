@@ -118,6 +118,24 @@ async function tikhubPost(platform, endpoint, body, limit = 20, directOnly = fal
     return items;
   } catch (error) { console.error(error.message); return []; }
 }
+async function logTikHubAccountStatus() {
+  const response = await fetch("https://api.tikhub.io/api/v1/tikhub/user/get_user_info", {
+    headers:{Authorization:`Bearer ${token}`,Accept:"application/json"},
+  });
+  const json = await response.json();
+  const key = json?.api_key_data||{};
+  const user = json?.user_data||{};
+  console.log("TikHub account status", JSON.stringify({
+    httpStatus:response.status,
+    keyStatus:key.api_key_status,
+    scopes:key.api_key_scopes,
+    expiresAt:key.expires_at,
+    active:user.is_active,
+    disabled:user.account_disabled,
+    emailVerified:user.email_verified,
+    hasCredit:Number(user.balance||0)+Number(user.free_credit||0)>0,
+  }));
+}
 const clean = (s = "") => s.replace(/<!\[CDATA\[|\]\]>/g,"").replace(/<[^>]+>/g,"").replace(/&nbsp;/g," ").replace(/&amp;/g,"&").trim();
 const parseFeed = (xml, source, cat, limit = 4) => [...xml.matchAll(/<item(?:\s[^>]*)?>([\s\S]*?)<\/item>/g)].slice(0,limit).map(m => {
   const b=m[1];
@@ -169,10 +187,11 @@ const weiboFallback = weiboFallbackTitles.map((title,index)=>({
 // 使用接口支持的日期范围获取最近七天榜单，避免依赖未知的快照时刻。
 const douyinBillboardEnd = billboardDate(new Date());
 const douyinBillboardStart = billboardDate(new Date(Date.now()-7*86400000));
-const douyinHotUrl = `https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_list?page=1&page_size=50&type=range&start_date=${douyinBillboardStart}&end_date=${douyinBillboardEnd}&sentence_tag=&keyword=`;
+const douyinHotUrl = `https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_list?page=1&page_size=10&type=range&start_date=${douyinBillboardStart}&end_date=${douyinBillboardEnd}&sentence_tag=&keyword=`;
 
 // 每 4 小时运行的轻量模式：只更新抖音热点榜，不重复调用其他平台接口。
 if (process.env.UPDATE_SCOPE === "douyin-hot") {
+  if (process.env.TIKHUB_DIAGNOSTICS === "1") await logTikHubAccountStatus();
   const latestDouyinHot = await tikhub("抖音",douyinHotUrl,50);
   if (!latestDouyinHot.length) {
     throw new Error(`TikHub 尚未返回抖音榜单 ${douyinBillboardStart}-${douyinBillboardEnd}，保留线上旧数据`);
