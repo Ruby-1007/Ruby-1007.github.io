@@ -235,11 +235,18 @@ const seenXhsIdeas = new Set();
 const xhsIdeas = freshXiaohongshu.filter(x=>!seenXhsIdeas.has(x.title)&&seenXhsIdeas.add(x.title)).slice(0,50).map((x,i)=>({...x,rank:i+1}));
 const seenNews = new Set();
 const newsItems = newsGroups.flat().filter(x=>!seenNews.has(x.title)&&seenNews.add(x.title)).slice(0,20);
+const profileRelevance = {
+  "宝藏好物":/好物|宝藏|实用|收纳|家居|香|包|杯|器|穿|宿舍|平价|值得|推荐/,
+  "品牌观察":/品牌|新品|设计|包装|联名|小众|香|美妆|气垫|门店|店|值得|合集/,
+  "品牌洞察":/品牌|设计|包装|流量|营销|消费|产品|门店|广告|创意|策略/,
+  "生活方式":/生活|美学|审美|居住|家|穿搭|仪式感|松弛|日常|独处|空间/,
+  "城市体验":/城市|上海|深圳|北京|杭州|广州|成都|南京|苏州|店|展|逛|周末|避暑|街区|咖啡|旅行/,
+};
 const diversify = (groups, limit) => {
   const seenUrls = new Set(), seenTitles = new Set(), result = [];
   const sorted = groups.map(group=>group.filter(item=>{
     const meaningful = item.title.replace(/#[^\s#]+/g,"").replace(/[^\p{L}\p{N}]/gu,"");
-    return meaningful.length>=6 && !/^(到底要不要|改选|勇于尝试)/.test(meaningful);
+    return meaningful.length>=6 && !/^(到底要不要|改选|勇于尝试)/.test(meaningful) && (profileRelevance[item.pillar]?.test(item.title)??true);
   }).sort((a,b)=>b.engagement-a.engagement));
   for (let round=0; result.length<limit && sorted.some(group=>group.length>round); round++) {
     for (const group of sorted) {
