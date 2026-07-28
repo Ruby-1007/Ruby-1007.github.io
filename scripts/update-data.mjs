@@ -118,6 +118,25 @@ async function tikhubPost(platform, endpoint, body, limit = 20, directOnly = fal
     return items;
   } catch (error) { console.error(error.message); return []; }
 }
+async function douyinOfficialHot() {
+  try {
+    const response = await fetch("https://www.iesdouyin.com/aweme/v1/hot/search/list/", {
+      headers: {"User-Agent":"Mozilla/5.0 ZhiyaoWorkbench/1.0",Accept:"application/json"},
+    });
+    if (!response.ok) throw new Error(`抖音官方热点榜 ${response.status}`);
+    const json = await response.json();
+    if (json.status_code !== 0 || !Array.isArray(json.data?.word_list)) throw new Error("抖音官方热点榜响应异常");
+    return json.data.word_list.slice().sort((a,b)=>(a.position||99)-(b.position||99)).slice(0,50).map((item,index)=>({
+      platform:"抖音",
+      title:clean(item.word),
+      heat:String(item.hot_value||"实时"),
+      metrics:{likes:0,collects:0,comments:0,shares:0,views:0},
+      engagement:0,
+      url:searchUrl("抖音",clean(item.word)),
+      rank:index+1,
+    })).filter(item=>item.title);
+  } catch (error) { console.error(error.message); return []; }
+}
 const clean = (s = "") => s.replace(/<!\[CDATA\[|\]\]>/g,"")
   .replace(/&amp;/gi,"&").replace(/&lt;/gi,"<").replace(/&gt;/gi,">").replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'")
   .replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(Number(n))).replace(/<[^>]+>/g,"")
@@ -159,15 +178,11 @@ const weiboFallback = weiboFallbackTitles.map((title,index)=>({
   rank:index+1,
   url:searchUrl("微博",title),
 }));
-// Billboard 分析接口对当前 API key 持续返回业务 400；改用同一供应商的
-// App V3 实时热点榜接口，避免依赖快照时间并保持单次请求成本。
-const douyinHotUrl = "https://api.tikhub.io/api/v1/douyin/app/v3/fetch_hot_search_list?board_type=0&board_sub_type=";
-
 // 每 4 小时运行的轻量模式：只更新抖音热点榜，不重复调用其他平台接口。
 if (process.env.UPDATE_SCOPE === "douyin-hot") {
-  const latestDouyinHot = await tikhub("抖音",douyinHotUrl,50);
+  const latestDouyinHot = await douyinOfficialHot();
   if (!latestDouyinHot.length) {
-    throw new Error("TikHub 尚未返回抖音实时热点榜，保留线上旧数据");
+    throw new Error("抖音官方页面尚未返回热点榜，保留线上旧数据");
   }
   const preserved = (previous.hot||[]).filter(x=>!(x.platform==="抖音"&&x.board==="热点榜"));
   const ranked = latestDouyinHot.map((x,index)=>({...x,board:"热点榜",rank:index+1}));
@@ -187,7 +202,7 @@ const [xhsPage1,xhsPage2,xhsPage3,douyinHot,douyinChallenge,weiboApp,weiboSummar
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=0",20),
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=1",20),
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=2",20),
-  tikhub("抖音",douyinHotUrl,50),
+  douyinOfficialHot(),
   tikhub("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_challenge_list?page=1&page_size=50",50),
   tikhub("微博","https://api.tikhub.io/api/v1/weibo/app/fetch_hot_search?category=realtimehot&page=1&count=50&region_name=%E5%8C%97%E4%BA%AC",50),
   tikhub("微博","https://api.tikhub.io/api/v1/weibo/web_v2/fetch_hot_search_summary",50),
