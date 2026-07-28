@@ -166,12 +166,36 @@ const weiboFallback = weiboFallbackTitles.map((title,index)=>({
   rank:index+1,
   url:searchUrl("微博",title),
 }));
-const douyinSnapshot = billboardTime(new Date());
+// TikHub 的榜单快照会比实时页面稍晚入库。取 30 分钟前的完整快照，
+// 避免请求“当前秒”拿到空数组后继续沿用旧榜单。
+const douyinSnapshot = billboardTime(new Date(Date.now()-30*60*1000));
+const douyinHotUrl = `https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_list?page=1&page_size=50&type=snapshot&snapshot_time=${douyinSnapshot}&sentence_tag=&keyword=`;
+
+// 每 4 小时运行的轻量模式：只更新抖音热点榜，不重复调用其他平台接口。
+if (process.env.UPDATE_SCOPE === "douyin-hot") {
+  const latestDouyinHot = await tikhub("抖音",douyinHotUrl,50);
+  if (!latestDouyinHot.length) {
+    throw new Error(`TikHub 尚未返回抖音快照 ${douyinSnapshot}，保留线上旧数据`);
+  }
+  const preserved = (previous.hot||[]).filter(x=>!(x.platform==="抖音"&&x.board==="热点榜"));
+  const ranked = latestDouyinHot.map((x,index)=>({...x,board:"热点榜",rank:index+1}));
+  const payload = {
+    ...previous,
+    fetchedAt:new Date().toISOString(),
+    hot:[...preserved,...ranked],
+    status:{...(previous.status||{}),douyin:true},
+  };
+  await mkdir("data",{recursive:true});
+  await writeFile("data/live.json",JSON.stringify(payload,null,2)+"\n");
+  console.log(`Saved ${ranked.length} fresh Douyin hot topics from snapshot ${douyinSnapshot}`);
+  process.exit(0);
+}
+
 const [xhsPage1,xhsPage2,xhsPage3,douyinHot,douyinChallenge,weiboApp,weiboSummary,weiboIndex,weiboWeb,...newsGroups] = await Promise.all([
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=0",20),
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=1",20),
   tikhub("小红书","https://api.tikhub.io/api/v1/xiaohongshu/app_v2/get_creator_hot_inspiration_feed?cursor=2",20),
-  tikhub("抖音",`https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_list?page=1&page_size=50&type=snapshot&snapshot_time=${douyinSnapshot}&sentence_tag=&keyword=`,50),
+  tikhub("抖音",douyinHotUrl,50),
   tikhub("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_challenge_list?page=1&page_size=50",50),
   tikhub("微博","https://api.tikhub.io/api/v1/weibo/app/fetch_hot_search?category=realtimehot&page=1&count=50&region_name=%E5%8C%97%E4%BA%AC",50),
   tikhub("微博","https://api.tikhub.io/api/v1/weibo/web_v2/fetch_hot_search_summary",50),
