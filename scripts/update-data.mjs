@@ -132,15 +132,6 @@ async function feed(url, source, cat, limit = 4) {
   } catch (error) { console.error(error.message); return []; }
 }
 const googleNews = q => `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=zh-CN&gl=CN&ceid=CN:zh-Hans`;
-const billboardDate = date => {
-  const parts = Object.fromEntries(new Intl.DateTimeFormat("zh-CN", {
-    timeZone: "Asia/Shanghai",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).formatToParts(date).map(({type,value}) => [type,value]));
-  return `${parts.year}${parts.month}${parts.day}`;
-};
 let previous = {};
 try { previous = JSON.parse(await readFile("data/live.json","utf8")); } catch {}
 const previousPlatform = platform => (previous.hot||[]).filter(x=>x.platform===platform);
@@ -165,17 +156,15 @@ const weiboFallback = weiboFallbackTitles.map((title,index)=>({
   rank:index+1,
   url:searchUrl("微博",title),
 }));
-// TikHub 的 snapshot 模式只接受已经入库的精确快照时刻，任意当前时间会返回 400。
-// 使用接口支持的日期范围获取最近七天榜单，避免依赖未知的快照时刻。
-const douyinBillboardEnd = billboardDate(new Date());
-const douyinBillboardStart = billboardDate(new Date(Date.now()-7*86400000));
-const douyinHotUrl = `https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_list?page=1&page_size=50&type=range&start_date=${douyinBillboardStart}&end_date=${douyinBillboardEnd}&sentence_tag=&keyword=`;
+// Billboard 分析接口对当前 API key 持续返回业务 400；改用同一供应商的
+// App V3 实时热点榜接口，避免依赖快照时间并保持单次请求成本。
+const douyinHotUrl = "https://api.tikhub.io/api/v1/douyin/app/v3/fetch_hot_search_list?board_type=0&board_sub_type=";
 
 // 每 4 小时运行的轻量模式：只更新抖音热点榜，不重复调用其他平台接口。
 if (process.env.UPDATE_SCOPE === "douyin-hot") {
   const latestDouyinHot = await tikhub("抖音",douyinHotUrl,50);
   if (!latestDouyinHot.length) {
-    throw new Error(`TikHub 尚未返回抖音榜单 ${douyinBillboardStart}-${douyinBillboardEnd}，保留线上旧数据`);
+    throw new Error("TikHub 尚未返回抖音实时热点榜，保留线上旧数据");
   }
   const preserved = (previous.hot||[]).filter(x=>!(x.platform==="抖音"&&x.board==="热点榜"));
   const ranked = latestDouyinHot.map((x,index)=>({...x,board:"热点榜",rank:index+1}));
@@ -187,7 +176,7 @@ if (process.env.UPDATE_SCOPE === "douyin-hot") {
   };
   await mkdir("data",{recursive:true});
   await writeFile("data/live.json",JSON.stringify(payload,null,2)+"\n");
-  console.log(`Saved ${ranked.length} fresh Douyin hot topics from ${douyinBillboardStart}-${douyinBillboardEnd}`);
+  console.log(`Saved ${ranked.length} fresh Douyin hot topics`);
   process.exit(0);
 }
 
