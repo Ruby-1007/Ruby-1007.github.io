@@ -223,19 +223,42 @@ const freshXiaohongshu = xiaohongshu.length ? xiaohongshu : previousPlatform("�
 const freshWeibo = weiboApp.length ? weiboApp : weiboSummary.length ? weiboSummary : weiboIndex.length ? weiboIndex : weiboWeb.length ? weiboWeb : previousPlatform("微博").length ? previousPlatform("微博") : weiboFallback;
 const douyinHotRanked = freshDouyinHot.map((x,i)=>({...x,board:"热点榜",rank:i+1}));
 const douyinChallengeRanked = freshDouyinChallenge.map((x,i)=>({...x,board:"挑战榜",rank:i+1}));
-const xhsKeywords = [...new Set(xiaohongshu.slice(0,3).map(x=>x.title))];
-if (!xhsKeywords.length) xhsKeywords.push("生活","职场","成长");
-const [xhsIdeaGroups,douyinViral] = await Promise.all([
-  Promise.all(xhsKeywords.map(keyword=>tikhub("小红书",`https://api.tikhub.io/api/v1/xiaohongshu/app_v2/search_notes?keyword=${encodeURIComponent(keyword)}&page=1&sort_type=popularity_descending&note_type=%E4%B8%8D%E9%99%90&time_filter=%E4%B8%80%E5%91%A8%E5%86%85`,20,true))),
-  tikhubPost("抖音","https://api.tikhub.io/api/v1/douyin/billboard/fetch_hot_total_video_list",{page:1,page_size:20,date_window:24,sub_type:1001,keyword:"",tags:[]},20,true),
+const profileSearches = [
+  {keyword:"宝藏好物",pillar:"宝藏好物"},
+  {keyword:"小众品牌",pillar:"品牌观察"},
+  {keyword:"品牌设计",pillar:"品牌洞察"},
+  {keyword:"生活方式美学",pillar:"生活方式"},
+  {keyword:"城市体验",pillar:"城市体验"},
+];
+const [xhsIdeaGroups,douyinIdeaGroups] = await Promise.all([
+  Promise.all(profileSearches.map(({keyword,pillar})=>tikhub("小红书",`https://api.tikhub.io/api/v1/xiaohongshu/app_v2/search_notes?keyword=${encodeURIComponent(keyword)}&page=1&sort_type=popularity_descending&note_type=%E4%B8%8D%E9%99%90&time_filter=%E4%B8%80%E5%91%A8%E5%86%85`,20,true).then(items=>items.map(x=>({...x,profileKeyword:keyword,pillar}))))),
+  Promise.all(profileSearches.map(({keyword,pillar})=>tikhubPost("抖音","https://api.tikhub.io/api/v1/douyin/search/fetch_video_search_v2",{keyword,cursor:0,sort_type:"1",publish_time:"7",filter_duration:"0",content_type:"1",search_id:"",backtrace:""},20,true).then(items=>items.map(x=>({...x,profileKeyword:keyword,pillar}))))),
 ]);
 const seenXhsIdeas = new Set();
 const xhsIdeas = freshXiaohongshu.filter(x=>!seenXhsIdeas.has(x.title)&&seenXhsIdeas.add(x.title)).slice(0,50).map((x,i)=>({...x,rank:i+1}));
-const xhsViral = xhsIdeaGroups[0]||[];
 const seenNews = new Set();
 const newsItems = newsGroups.flat().filter(x=>!seenNews.has(x.title)&&seenNews.add(x.title)).slice(0,20);
-const rankedXhsViral = [...xhsViral].sort((a,b)=>b.engagement-a.engagement).map((x,i)=>({...x,rank:i+1,rankingBasis:"一周内按点赞与互动筛选"}));
-const viral = [...rankedXhsViral,...douyinViral];
+const diversify = (groups, limit) => {
+  const seenUrls = new Set(), seenTitles = new Set(), result = [];
+  const sorted = groups.map(group=>[...group].sort((a,b)=>b.engagement-a.engagement));
+  for (let round=0; result.length<limit && sorted.some(group=>group.length>round); round++) {
+    for (const group of sorted) {
+      const item = group[round];
+      if (!item) continue;
+      const id = item.url || item.title;
+      if (seenUrls.has(id) || seenTitles.has(item.title)) continue;
+      seenUrls.add(id);
+      seenTitles.add(item.title);
+      result.push(item);
+      if (result.length===limit) break;
+    }
+  }
+  return result;
+};
+const rankedXhsViral = diversify(xhsIdeaGroups,12).map((x,i)=>({...x,rank:i+1,rankingBasis:`近一周「${x.profileKeyword}」高互动作品`}));
+const rankedDouyinViral = diversify(douyinIdeaGroups,8).map((x,i)=>({...x,rank:i+1,rankingBasis:`近一周「${x.profileKeyword}」高赞视频`}));
+const freshViral = [...rankedXhsViral,...rankedDouyinViral];
+const viral = freshViral.length ? freshViral : (previous.viral||[]);
 const payload = { fetchedAt:new Date().toISOString(), hot:[...xhsIdeas,...douyinHotRanked,...douyinChallengeRanked,...freshWeibo.map((x,i)=>({...x,rank:i+1}))], viral, news:newsItems, status:{xiaohongshu:!!xhsIdeas.length,douyin:!!(douyinHotRanked.length||douyinChallengeRanked.length),weibo:!!freshWeibo.length,viral:!!viral.length,news:!!newsItems.length} };
 await mkdir("data",{recursive:true});
 await writeFile("data/live.json",JSON.stringify(payload,null,2)+"\n");
