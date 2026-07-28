@@ -83,7 +83,10 @@ const parseTikHub = (platform, json, limit = 20, directOnly = false) => {
 async function tikhub(platform, endpoint, limit = 20, directOnly = false) {
   try {
     const response = await fetch(endpoint, { headers: { Authorization: `Bearer ${token}`, Accept: "application/json" } });
-    if (!response.ok) throw new Error(`${platform} ${response.status}`);
+    if (!response.ok) {
+      const detail = (await response.text()).replace(/\s+/g," ").slice(0,500);
+      throw new Error(`${platform} ${response.status}: ${detail}`);
+    }
     const json = await response.json();
     const items = parseTikHub(platform,json,limit,directOnly);
     if (!items.length) {
