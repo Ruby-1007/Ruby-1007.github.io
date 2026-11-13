@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-13T04:24:09.305Z",
+  "fetchedAt": "2026-11-13T07:39:16.715Z",
   "hot": [
     {
       "platform": "小红书",
@@ -750,6 +750,790 @@
       "engagement": 0,
       "url": "https://www.xiaohongshu.com/search_result?keyword=%E6%9C%80%E7%AC%A6%E5%90%88%E8%BE%9E%E8%81%8C%E6%A6%82%E5%BF%B5cha%E4%B9%8B%E4%BA%BA&source=web_explore_feed",
       "rank": 50
+    },
+    {
+      "platform": "抖音",
+      "title": "油价下调 加满一箱油少花约26元",
+      "heat": "11321887",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%B2%B9%E4%BB%B7%E4%B8%8B%E8%B0%83%20%E5%8A%A0%E6%BB%A1%E4%B8%80%E7%AE%B1%E6%B2%B9%E5%B0%91%E8%8A%B1%E7%BA%A626%E5%85%83",
+      "rank": 1,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "2027研究生报考人数347万",
+      "heat": "11074385",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/2027%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8A%A5%E8%80%83%E4%BA%BA%E6%95%B0347%E4%B8%87",
+      "rank": 2,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "双向奔赴的投资",
+      "heat": "11063367",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E5%8F%8C%E5%90%91%E5%A5%94%E8%B5%B4%E7%9A%84%E6%8A%95%E8%B5%84",
+      "rank": 3,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "课本里的逍遥游有画面了",
+      "heat": "11062005",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E8%AF%BE%E6%9C%AC%E9%87%8C%E7%9A%84%E9%80%8D%E9%81%A5%E6%B8%B8%E6%9C%89%E7%94%BB%E9%9D%A2%E4%BA%86",
+      "rank": 4,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "手工敲虾到底有多好吃",
+      "heat": "10277923",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%89%8B%E5%B7%A5%E6%95%B2%E8%99%BE%E5%88%B0%E5%BA%95%E6%9C%89%E5%A4%9A%E5%A5%BD%E5%90%83",
+      "rank": 5,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "刘欢死因系感染性休克",
+      "heat": "10023152",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E5%88%98%E6%AC%A2%E6%AD%BB%E5%9B%A0%E7%B3%BB%E6%84%9F%E6%9F%93%E6%80%A7%E4%BC%91%E5%85%8B",
+      "rank": 6,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "朴树哥哥否认朴树去世",
+      "heat": "8894077",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%9C%B4%E6%A0%91%E5%93%A5%E5%93%A5%E5%90%A6%E8%AE%A4%E6%9C%B4%E6%A0%91%E5%8E%BB%E4%B8%96",
+      "rank": 7,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "我军无人发烟车亮相演练场",
+      "heat": "8850676",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%88%91%E5%86%9B%E6%97%A0%E4%BA%BA%E5%8F%91%E7%83%9F%E8%BD%A6%E4%BA%AE%E7%9B%B8%E6%BC%94%E7%BB%83%E5%9C%BA",
+      "rank": 8,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "76人战胜猛龙",
+      "heat": "8847086",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/76%E4%BA%BA%E6%88%98%E8%83%9C%E7%8C%9B%E9%BE%99",
+      "rank": 9,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "R星入驻抖音",
+      "heat": "8757311",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/R%E6%98%9F%E5%85%A5%E9%A9%BB%E6%8A%96%E9%9F%B3",
+      "rank": 10,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "刘欢妻子发公开信：他是这样的人",
+      "heat": "8710086",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E5%88%98%E6%AC%A2%E5%A6%BB%E5%AD%90%E5%8F%91%E5%85%AC%E5%BC%80%E4%BF%A1%EF%BC%9A%E4%BB%96%E6%98%AF%E8%BF%99%E6%A0%B7%E7%9A%84%E4%BA%BA",
+      "rank": 11,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "特朗普连续发帖痛斥民主党",
+      "heat": "7914329",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E7%89%B9%E6%9C%97%E6%99%AE%E8%BF%9E%E7%BB%AD%E5%8F%91%E5%B8%96%E7%97%9B%E6%96%A5%E6%B0%91%E4%B8%BB%E5%85%9A",
+      "rank": 12,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "欧国联意大利3:1胜法国",
+      "heat": "7763057",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%AC%A7%E5%9B%BD%E8%81%94%E6%84%8F%E5%A4%A7%E5%88%A93%3A1%E8%83%9C%E6%B3%95%E5%9B%BD",
+      "rank": 13,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "你爱的是花还是花为你开",
+      "heat": "7748130",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E4%BD%A0%E7%88%B1%E7%9A%84%E6%98%AF%E8%8A%B1%E8%BF%98%E6%98%AF%E8%8A%B1%E4%B8%BA%E4%BD%A0%E5%BC%80",
+      "rank": 14,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "谷雨李小冉下线",
+      "heat": "7743578",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E8%B0%B7%E9%9B%A8%E6%9D%8E%E5%B0%8F%E5%86%89%E4%B8%8B%E7%BA%BF",
+      "rank": 15,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "覆面系转场挑战",
+      "heat": "7736713",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E8%A6%86%E9%9D%A2%E7%B3%BB%E8%BD%AC%E5%9C%BA%E6%8C%91%E6%88%98",
+      "rank": 16,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "昊天武道会扬州线下总决赛开战",
+      "heat": "7727999",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%98%8A%E5%A4%A9%E6%AD%A6%E9%81%93%E4%BC%9A%E6%89%AC%E5%B7%9E%E7%BA%BF%E4%B8%8B%E6%80%BB%E5%86%B3%E8%B5%9B%E5%BC%80%E6%88%98",
+      "rank": 17,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "停车楼飘移帅炸了",
+      "heat": "7722896",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E5%81%9C%E8%BD%A6%E6%A5%BC%E9%A3%98%E7%A7%BB%E5%B8%85%E7%82%B8%E4%BA%86",
+      "rank": 18,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "这口猪刨花拌面吃商极高",
+      "heat": "7707680",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E8%BF%99%E5%8F%A3%E7%8C%AA%E5%88%A8%E8%8A%B1%E6%8B%8C%E9%9D%A2%E5%90%83%E5%95%86%E6%9E%81%E9%AB%98",
+      "rank": 19,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "为何说许飞厉娜可能不需要和解",
+      "heat": "7693406",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E4%B8%BA%E4%BD%95%E8%AF%B4%E8%AE%B8%E9%A3%9E%E5%8E%89%E5%A8%9C%E5%8F%AF%E8%83%BD%E4%B8%8D%E9%9C%80%E8%A6%81%E5%92%8C%E8%A7%A3",
+      "rank": 20,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "首个AI漫剧晚会阵容官宣",
+      "heat": "7691807",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E9%A6%96%E4%B8%AAAI%E6%BC%AB%E5%89%A7%E6%99%9A%E4%BC%9A%E9%98%B5%E5%AE%B9%E5%AE%98%E5%AE%A3",
+      "rank": 21,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "你还是逃不过覆面系",
+      "heat": "7685330",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E4%BD%A0%E8%BF%98%E6%98%AF%E9%80%83%E4%B8%8D%E8%BF%87%E8%A6%86%E9%9D%A2%E7%B3%BB",
+      "rank": 22,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "蒋一帆沈阳为爱而歌歌友会",
+      "heat": "7683181",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E8%92%8B%E4%B8%80%E5%B8%86%E6%B2%88%E9%98%B3%E4%B8%BA%E7%88%B1%E8%80%8C%E6%AD%8C%E6%AD%8C%E5%8F%8B%E4%BC%9A",
+      "rank": 23,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "我的脸不接受锐评谢谢",
+      "heat": "7676029",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%88%91%E7%9A%84%E8%84%B8%E4%B8%8D%E6%8E%A5%E5%8F%97%E9%94%90%E8%AF%84%E8%B0%A2%E8%B0%A2",
+      "rank": 24,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "好像在看赵丽颖朋友圈",
+      "heat": "7673037",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E5%A5%BD%E5%83%8F%E5%9C%A8%E7%9C%8B%E8%B5%B5%E4%B8%BD%E9%A2%96%E6%9C%8B%E5%8F%8B%E5%9C%88",
+      "rank": 25,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "金晨回应回归现在就出发4",
+      "heat": "7672659",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E9%87%91%E6%99%A8%E5%9B%9E%E5%BA%94%E5%9B%9E%E5%BD%92%E7%8E%B0%E5%9C%A8%E5%B0%B1%E5%87%BA%E5%8F%914",
+      "rank": 26,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "人生中的第一座雪山是萨武神山",
+      "heat": "7668153",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E4%BA%BA%E7%94%9F%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E5%BA%A7%E9%9B%AA%E5%B1%B1%E6%98%AF%E8%90%A8%E6%AD%A6%E7%A5%9E%E5%B1%B1",
+      "rank": 27,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "时间从来证明不了什么",
+      "heat": "7666849",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%97%B6%E9%97%B4%E4%BB%8E%E6%9D%A5%E8%AF%81%E6%98%8E%E4%B8%8D%E4%BA%86%E4%BB%80%E4%B9%88",
+      "rank": 28,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "严肃进入毛茸茸皮草时代",
+      "heat": "7666746",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E4%B8%A5%E8%82%83%E8%BF%9B%E5%85%A5%E6%AF%9B%E8%8C%B8%E8%8C%B8%E7%9A%AE%E8%8D%89%E6%97%B6%E4%BB%A3",
+      "rank": 29,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "铁公鸡来南太行也得破费",
+      "heat": "7659637",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E9%93%81%E5%85%AC%E9%B8%A1%E6%9D%A5%E5%8D%97%E5%A4%AA%E8%A1%8C%E4%B9%9F%E5%BE%97%E7%A0%B4%E8%B4%B9",
+      "rank": 30,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "烂奇迹翻唱",
+      "heat": "7659345",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E7%83%82%E5%A5%87%E8%BF%B9%E7%BF%BB%E5%94%B1",
+      "rank": 31,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "可以给我买麻辣烫糖葫芦吗",
+      "heat": "7656154",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E5%8F%AF%E4%BB%A5%E7%BB%99%E6%88%91%E4%B9%B0%E9%BA%BB%E8%BE%A3%E7%83%AB%E7%B3%96%E8%91%AB%E8%8A%A6%E5%90%97",
+      "rank": 32,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "情呀爱呀手势舞",
+      "heat": "7654630",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%83%85%E5%91%80%E7%88%B1%E5%91%80%E6%89%8B%E5%8A%BF%E8%88%9E",
+      "rank": 33,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "跟着后会友期开启进藏之旅",
+      "heat": "7651636",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E8%B7%9F%E7%9D%80%E5%90%8E%E4%BC%9A%E5%8F%8B%E6%9C%9F%E5%BC%80%E5%90%AF%E8%BF%9B%E8%97%8F%E4%B9%8B%E6%97%85",
+      "rank": 34,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "今天是太阳雨假表哥真表嫂",
+      "heat": "7651371",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E4%BB%8A%E5%A4%A9%E6%98%AF%E5%A4%AA%E9%98%B3%E9%9B%A8%E5%81%87%E8%A1%A8%E5%93%A5%E7%9C%9F%E8%A1%A8%E5%AB%82",
+      "rank": 35,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "天赐抖音直播首秀",
+      "heat": "7650758",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E5%A4%A9%E8%B5%90%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E9%A6%96%E7%A7%80",
+      "rank": 36,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "烟火美食夯吃挑战开赛了",
+      "heat": "7645365",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E7%83%9F%E7%81%AB%E7%BE%8E%E9%A3%9F%E5%A4%AF%E5%90%83%E6%8C%91%E6%88%98%E5%BC%80%E8%B5%9B%E4%BA%86",
+      "rank": 37,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "青稚小番茄来啦",
+      "heat": "7644485",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E9%9D%92%E7%A8%9A%E5%B0%8F%E7%95%AA%E8%8C%84%E6%9D%A5%E5%95%A6",
+      "rank": 38,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "盆栽新歌HongKong官方MV上线",
+      "heat": "7644397",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E7%9B%86%E6%A0%BD%E6%96%B0%E6%AD%8CHongKong%E5%AE%98%E6%96%B9MV%E4%B8%8A%E7%BA%BF",
+      "rank": 39,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "坎宁安52分11助攻创历史",
+      "heat": "7643322",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E5%9D%8E%E5%AE%81%E5%AE%8952%E5%88%8611%E5%8A%A9%E6%94%BB%E5%88%9B%E5%8E%86%E5%8F%B2",
+      "rank": 40,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "我已经准备好回家过年了",
+      "heat": "7642619",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%88%91%E5%B7%B2%E7%BB%8F%E5%87%86%E5%A4%87%E5%A5%BD%E5%9B%9E%E5%AE%B6%E8%BF%87%E5%B9%B4%E4%BA%86",
+      "rank": 41,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "我的正缘原来离我这么近",
+      "heat": "7641452",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%88%91%E7%9A%84%E6%AD%A3%E7%BC%98%E5%8E%9F%E6%9D%A5%E7%A6%BB%E6%88%91%E8%BF%99%E4%B9%88%E8%BF%91",
+      "rank": 42,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "秋冬色彩穿搭不重样",
+      "heat": "7641301",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E7%A7%8B%E5%86%AC%E8%89%B2%E5%BD%A9%E7%A9%BF%E6%90%AD%E4%B8%8D%E9%87%8D%E6%A0%B7",
+      "rank": 43,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "高难度多巴胺发色挑战",
+      "heat": "7640055",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E9%AB%98%E9%9A%BE%E5%BA%A6%E5%A4%9A%E5%B7%B4%E8%83%BA%E5%8F%91%E8%89%B2%E6%8C%91%E6%88%98",
+      "rank": 44,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "权威展示downtowngirl穿搭",
+      "heat": "7638968",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%9D%83%E5%A8%81%E5%B1%95%E7%A4%BAdowntowngirl%E7%A9%BF%E6%90%AD",
+      "rank": 45,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "王彦霖探访流浪狗救助站",
+      "heat": "7638634",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E7%8E%8B%E5%BD%A6%E9%9C%96%E6%8E%A2%E8%AE%BF%E6%B5%81%E6%B5%AA%E7%8B%97%E6%95%91%E5%8A%A9%E7%AB%99",
+      "rank": 46,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "多喜一家人定档11月16日",
+      "heat": "7638158",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E5%A4%9A%E5%96%9C%E4%B8%80%E5%AE%B6%E4%BA%BA%E5%AE%9A%E6%A1%A311%E6%9C%8816%E6%97%A5",
+      "rank": 47,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "星期一是红色的怎么说呢",
+      "heat": "7633114",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E6%98%9F%E6%9C%9F%E4%B8%80%E6%98%AF%E7%BA%A2%E8%89%B2%E7%9A%84%E6%80%8E%E4%B9%88%E8%AF%B4%E5%91%A2",
+      "rank": 48,
+      "board": "热点榜"
+    },
+    {
+      "platform": "抖音",
+      "title": "幸福迢迢如流水",
+      "heat": "7631201",
+      "metrics": {
+        "likes": 0,
+        "collects": 0,
+        "comments": 0,
+        "shares": 0,
+        "views": 0
+      },
+      "engagement": 0,
+      "url": "https://www.douyin.com/search/%E5%B9%B8%E7%A6%8F%E8%BF%A2%E8%BF%A2%E5%A6%82%E6%B5%81%E6%B0%B4",
+      "rank": 49,
+      "board": "热点榜"
     },
     {
       "platform": "抖音",
@@ -2300,790 +3084,6 @@
       "engagement": 0,
       "url": "https://s.weibo.com/weibo?q=%E9%A9%AC%E4%BA%91%E8%AF%95%E7%A9%BF%E6%B7%98%E5%AE%9D%E9%97%AA%E8%B4%AD%E9%AA%91%E6%89%8B%E6%9C%8D%E7%85%A7%E7%89%87",
       "rank": 50
-    },
-    {
-      "platform": "抖音",
-      "title": "油价下调 加满一箱油少花约26元",
-      "heat": "11740800",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%B2%B9%E4%BB%B7%E4%B8%8B%E8%B0%83%20%E5%8A%A0%E6%BB%A1%E4%B8%80%E7%AE%B1%E6%B2%B9%E5%B0%91%E8%8A%B1%E7%BA%A626%E5%85%83",
-      "rank": 1,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "课本里的逍遥游有画面了",
-      "heat": "11318208",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E8%AF%BE%E6%9C%AC%E9%87%8C%E7%9A%84%E9%80%8D%E9%81%A5%E6%B8%B8%E6%9C%89%E7%94%BB%E9%9D%A2%E4%BA%86",
-      "rank": 2,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "我国将加快构建现代化基础设施体系",
-      "heat": "11100342",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%88%91%E5%9B%BD%E5%B0%86%E5%8A%A0%E5%BF%AB%E6%9E%84%E5%BB%BA%E7%8E%B0%E4%BB%A3%E5%8C%96%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E4%BD%93%E7%B3%BB",
-      "rank": 3,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "2027研究生报考人数347万",
-      "heat": "11093516",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/2027%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8A%A5%E8%80%83%E4%BA%BA%E6%95%B0347%E4%B8%87",
-      "rank": 4,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "库里腹斜肌撕裂 预计缺席4周",
-      "heat": "10157901",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E5%BA%93%E9%87%8C%E8%85%B9%E6%96%9C%E8%82%8C%E6%92%95%E8%A3%82%20%E9%A2%84%E8%AE%A1%E7%BC%BA%E5%B8%AD4%E5%91%A8",
-      "rank": 5,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "朴树哥哥否认朴树去世",
-      "heat": "10054190",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%9C%B4%E6%A0%91%E5%93%A5%E5%93%A5%E5%90%A6%E8%AE%A4%E6%9C%B4%E6%A0%91%E5%8E%BB%E4%B8%96",
-      "rank": 6,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "秋冬落地签是一杯warm drink",
-      "heat": "8605734",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E7%A7%8B%E5%86%AC%E8%90%BD%E5%9C%B0%E7%AD%BE%E6%98%AF%E4%B8%80%E6%9D%AFwarm%20drink",
-      "rank": 7,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "淡人友好冬日旅行",
-      "heat": "8349381",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%B7%A1%E4%BA%BA%E5%8F%8B%E5%A5%BD%E5%86%AC%E6%97%A5%E6%97%85%E8%A1%8C",
-      "rank": 8,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "R星入驻抖音",
-      "heat": "7836331",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/R%E6%98%9F%E5%85%A5%E9%A9%BB%E6%8A%96%E9%9F%B3",
-      "rank": 9,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "刘欢妻子发公开信：他是这样的人",
-      "heat": "7820419",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E5%88%98%E6%AC%A2%E5%A6%BB%E5%AD%90%E5%8F%91%E5%85%AC%E5%BC%80%E4%BF%A1%EF%BC%9A%E4%BB%96%E6%98%AF%E8%BF%99%E6%A0%B7%E7%9A%84%E4%BA%BA",
-      "rank": 10,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "时间从来证明不了什么",
-      "heat": "7796429",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%97%B6%E9%97%B4%E4%BB%8E%E6%9D%A5%E8%AF%81%E6%98%8E%E4%B8%8D%E4%BA%86%E4%BB%80%E4%B9%88",
-      "rank": 11,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "国内金饰价跌穿1200元",
-      "heat": "7754644",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E5%9B%BD%E5%86%85%E9%87%91%E9%A5%B0%E4%BB%B7%E8%B7%8C%E7%A9%BF1200%E5%85%83",
-      "rank": 12,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "欧国联意大利3:1胜法国",
-      "heat": "7739935",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%AC%A7%E5%9B%BD%E8%81%94%E6%84%8F%E5%A4%A7%E5%88%A93%3A1%E8%83%9C%E6%B3%95%E5%9B%BD",
-      "rank": 13,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "昊天武道会扬州线下总决赛开战",
-      "heat": "7731690",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%98%8A%E5%A4%A9%E6%AD%A6%E9%81%93%E4%BC%9A%E6%89%AC%E5%B7%9E%E7%BA%BF%E4%B8%8B%E6%80%BB%E5%86%B3%E8%B5%9B%E5%BC%80%E6%88%98",
-      "rank": 14,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "我已经准备好回家过年了",
-      "heat": "7730353",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%88%91%E5%B7%B2%E7%BB%8F%E5%87%86%E5%A4%87%E5%A5%BD%E5%9B%9E%E5%AE%B6%E8%BF%87%E5%B9%B4%E4%BA%86",
-      "rank": 15,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "你爱的是花还是花为你开",
-      "heat": "7722419",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E4%BD%A0%E7%88%B1%E7%9A%84%E6%98%AF%E8%8A%B1%E8%BF%98%E6%98%AF%E8%8A%B1%E4%B8%BA%E4%BD%A0%E5%BC%80",
-      "rank": 16,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "你还是逃不过覆面系",
-      "heat": "7720193",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E4%BD%A0%E8%BF%98%E6%98%AF%E9%80%83%E4%B8%8D%E8%BF%87%E8%A6%86%E9%9D%A2%E7%B3%BB",
-      "rank": 17,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "可以给我买麻辣烫糖葫芦吗",
-      "heat": "7713290",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E5%8F%AF%E4%BB%A5%E7%BB%99%E6%88%91%E4%B9%B0%E9%BA%BB%E8%BE%A3%E7%83%AB%E7%B3%96%E8%91%AB%E8%8A%A6%E5%90%97",
-      "rank": 18,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "首个AI漫剧晚会阵容官宣",
-      "heat": "7694502",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E9%A6%96%E4%B8%AAAI%E6%BC%AB%E5%89%A7%E6%99%9A%E4%BC%9A%E9%98%B5%E5%AE%B9%E5%AE%98%E5%AE%A3",
-      "rank": 19,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "幸福迢迢如流水",
-      "heat": "7694376",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E5%B9%B8%E7%A6%8F%E8%BF%A2%E8%BF%A2%E5%A6%82%E6%B5%81%E6%B0%B4",
-      "rank": 20,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "烂奇迹翻唱",
-      "heat": "7693444",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E7%83%82%E5%A5%87%E8%BF%B9%E7%BF%BB%E5%94%B1",
-      "rank": 21,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "斯马特被禁赛三场",
-      "heat": "7693354",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%96%AF%E9%A9%AC%E7%89%B9%E8%A2%AB%E7%A6%81%E8%B5%9B%E4%B8%89%E5%9C%BA",
-      "rank": 22,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "今天是太阳雨假表哥真表嫂",
-      "heat": "7686123",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E4%BB%8A%E5%A4%A9%E6%98%AF%E5%A4%AA%E9%98%B3%E9%9B%A8%E5%81%87%E8%A1%A8%E5%93%A5%E7%9C%9F%E8%A1%A8%E5%AB%82",
-      "rank": 23,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "我军无人发烟车亮相演练场",
-      "heat": "7684317",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%88%91%E5%86%9B%E6%97%A0%E4%BA%BA%E5%8F%91%E7%83%9F%E8%BD%A6%E4%BA%AE%E7%9B%B8%E6%BC%94%E7%BB%83%E5%9C%BA",
-      "rank": 24,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "瑙鲁总统时隔9个月再访华",
-      "heat": "7683165",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E7%91%99%E9%B2%81%E6%80%BB%E7%BB%9F%E6%97%B6%E9%9A%949%E4%B8%AA%E6%9C%88%E5%86%8D%E8%AE%BF%E5%8D%8E",
-      "rank": 25,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "好像在看赵丽颖朋友圈",
-      "heat": "7679537",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E5%A5%BD%E5%83%8F%E5%9C%A8%E7%9C%8B%E8%B5%B5%E4%B8%BD%E9%A2%96%E6%9C%8B%E5%8F%8B%E5%9C%88",
-      "rank": 26,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "情呀爱呀手势舞",
-      "heat": "7679464",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%83%85%E5%91%80%E7%88%B1%E5%91%80%E6%89%8B%E5%8A%BF%E8%88%9E",
-      "rank": 27,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "盆栽新歌HongKong官方MV上线",
-      "heat": "7677646",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E7%9B%86%E6%A0%BD%E6%96%B0%E6%AD%8CHongKong%E5%AE%98%E6%96%B9MV%E4%B8%8A%E7%BA%BF",
-      "rank": 28,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "跟着后会友期开启进藏之旅",
-      "heat": "7677244",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E8%B7%9F%E7%9D%80%E5%90%8E%E4%BC%9A%E5%8F%8B%E6%9C%9F%E5%BC%80%E5%90%AF%E8%BF%9B%E8%97%8F%E4%B9%8B%E6%97%85",
-      "rank": 29,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "这口猪刨花拌面吃商极高",
-      "heat": "7676705",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E8%BF%99%E5%8F%A3%E7%8C%AA%E5%88%A8%E8%8A%B1%E6%8B%8C%E9%9D%A2%E5%90%83%E5%95%86%E6%9E%81%E9%AB%98",
-      "rank": 30,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "为何说许飞厉娜可能不需要和解",
-      "heat": "7675263",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E4%B8%BA%E4%BD%95%E8%AF%B4%E8%AE%B8%E9%A3%9E%E5%8E%89%E5%A8%9C%E5%8F%AF%E8%83%BD%E4%B8%8D%E9%9C%80%E8%A6%81%E5%92%8C%E8%A7%A3",
-      "rank": 31,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "铁公鸡来南太行也得破费",
-      "heat": "7672573",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E9%93%81%E5%85%AC%E9%B8%A1%E6%9D%A5%E5%8D%97%E5%A4%AA%E8%A1%8C%E4%B9%9F%E5%BE%97%E7%A0%B4%E8%B4%B9",
-      "rank": 32,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "青稚小番茄来啦",
-      "heat": "7666519",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E9%9D%92%E7%A8%9A%E5%B0%8F%E7%95%AA%E8%8C%84%E6%9D%A5%E5%95%A6",
-      "rank": 33,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "高难度多巴胺发色挑战",
-      "heat": "7665754",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E9%AB%98%E9%9A%BE%E5%BA%A6%E5%A4%9A%E5%B7%B4%E8%83%BA%E5%8F%91%E8%89%B2%E6%8C%91%E6%88%98",
-      "rank": 34,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "多喜一家人定档11月16日",
-      "heat": "7662844",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E5%A4%9A%E5%96%9C%E4%B8%80%E5%AE%B6%E4%BA%BA%E5%AE%9A%E6%A1%A311%E6%9C%8816%E6%97%A5",
-      "rank": 35,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "天赐抖音直播首秀",
-      "heat": "7662364",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E5%A4%A9%E8%B5%90%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E9%A6%96%E7%A7%80",
-      "rank": 36,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "金晨回应回归现在就出发4",
-      "heat": "7660477",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E9%87%91%E6%99%A8%E5%9B%9E%E5%BA%94%E5%9B%9E%E5%BD%92%E7%8E%B0%E5%9C%A8%E5%B0%B1%E5%87%BA%E5%8F%914",
-      "rank": 37,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "告别信开机",
-      "heat": "7660026",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E5%91%8A%E5%88%AB%E4%BF%A1%E5%BC%80%E6%9C%BA",
-      "rank": 38,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "严肃进入毛茸茸皮草时代",
-      "heat": "7657788",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E4%B8%A5%E8%82%83%E8%BF%9B%E5%85%A5%E6%AF%9B%E8%8C%B8%E8%8C%B8%E7%9A%AE%E8%8D%89%E6%97%B6%E4%BB%A3",
-      "rank": 39,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "权威展示downtowngirl穿搭",
-      "heat": "7657336",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%9D%83%E5%A8%81%E5%B1%95%E7%A4%BAdowntowngirl%E7%A9%BF%E6%90%AD",
-      "rank": 40,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "自请分配去老君山看雪",
-      "heat": "7654971",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E8%87%AA%E8%AF%B7%E5%88%86%E9%85%8D%E5%8E%BB%E8%80%81%E5%90%9B%E5%B1%B1%E7%9C%8B%E9%9B%AA",
-      "rank": 41,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "明星们也来玩麻辣烫糖葫芦了",
-      "heat": "7653925",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%98%8E%E6%98%9F%E4%BB%AC%E4%B9%9F%E6%9D%A5%E7%8E%A9%E9%BA%BB%E8%BE%A3%E7%83%AB%E7%B3%96%E8%91%AB%E8%8A%A6%E4%BA%86",
-      "rank": 42,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "马天宇的拥抱太戳人了",
-      "heat": "7647410",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E9%A9%AC%E5%A4%A9%E5%AE%87%E7%9A%84%E6%8B%A5%E6%8A%B1%E5%A4%AA%E6%88%B3%E4%BA%BA%E4%BA%86",
-      "rank": 43,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "烟火美食夯吃挑战开赛了",
-      "heat": "7645001",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E7%83%9F%E7%81%AB%E7%BE%8E%E9%A3%9F%E5%A4%AF%E5%90%83%E6%8C%91%E6%88%98%E5%BC%80%E8%B5%9B%E4%BA%86",
-      "rank": 44,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "秋冬色彩穿搭不重样",
-      "heat": "7640972",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E7%A7%8B%E5%86%AC%E8%89%B2%E5%BD%A9%E7%A9%BF%E6%90%AD%E4%B8%8D%E9%87%8D%E6%A0%B7",
-      "rank": 45,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "我的正缘原来离我这么近",
-      "heat": "7640599",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%88%91%E7%9A%84%E6%AD%A3%E7%BC%98%E5%8E%9F%E6%9D%A5%E7%A6%BB%E6%88%91%E8%BF%99%E4%B9%88%E8%BF%91",
-      "rank": 46,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "王彦霖探访流浪狗救助站",
-      "heat": "7638786",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E7%8E%8B%E5%BD%A6%E9%9C%96%E6%8E%A2%E8%AE%BF%E6%B5%81%E6%B5%AA%E7%8B%97%E6%95%91%E5%8A%A9%E7%AB%99",
-      "rank": 47,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "毛茸茸的N种打开方式",
-      "heat": "7638713",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E6%AF%9B%E8%8C%B8%E8%8C%B8%E7%9A%84N%E7%A7%8D%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F",
-      "rank": 48,
-      "board": "热点榜"
-    },
-    {
-      "platform": "抖音",
-      "title": "短剧历史质感完全一个夯字",
-      "heat": "7636791",
-      "metrics": {
-        "likes": 0,
-        "collects": 0,
-        "comments": 0,
-        "shares": 0,
-        "views": 0
-      },
-      "engagement": 0,
-      "url": "https://www.douyin.com/search/%E7%9F%AD%E5%89%A7%E5%8E%86%E5%8F%B2%E8%B4%A8%E6%84%9F%E5%AE%8C%E5%85%A8%E4%B8%80%E4%B8%AA%E5%A4%AF%E5%AD%97",
-      "rank": 49,
-      "board": "热点榜"
     }
   ],
   "viral": [
@@ -3308,72 +3308,72 @@
     {
       "source": "杭州日报",
       "cat": "杭州",
-      "title": "文博之旅 常看常新 - 杭州政协",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9EbURaRG80R2Q2bnMtQWlxZ3J3eWotLWNicE9zY1BLTXJ2ckhrZjhxbmhGYXhlOHprQzZwZXNqMEQ1Xzh5UWJYbWgyLU40UXg0ZVVVdThGLTlQSWZQNDRzdDB5RmYxZHlmNEdCc3p4WQ?oc=5",
-      "brief": "文博之旅 常看常新 杭州政协"
+      "title": "文博之旅 常看常新 - 时尚休闲",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBPRXplMlQ2Rl9iaE16NzNFZlZla1lWbVZiSTFqVGtmY1NfeEZzd2NKLVJnM0V0NURPR1R3ZGJCWm5uVDMxYUNscUd0MFYtTWhhdWg5eGtWRUY1Z25kNnRRTVA0OXZLM050TkQzbXY3LWdMRS02N1JEVnpBOA?oc=5",
+      "brief": "文博之旅 常看常新 时尚休闲"
     },
     {
       "source": "杭州日报",
       "cat": "杭州",
-      "title": "钱塘湿地 迎来越冬候鸟 - 时尚休闲",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9SYmxxSVVjaDJKSVBKdHdhbEJnQXFadGJzZjQtbUtqYjE3RnZNZFB3U05SeDJwY3NYV05oaUptMEVQQXJIdlhGTGY1dlJ3SGZWQXJ3eFU1aUQwZ3ViQkZxbWtoa3lQam9HcmlOaWNjRkRjMDQycklPbXk5Yw?oc=5",
-      "brief": "钱塘湿地 迎来越冬候鸟 时尚休闲"
+      "title": "赏芦花绽放 赴“红楼”之约 - 杭州网",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTHF5Q05vemFuMVRqT3JITXBRaXZTbU54MVB5YmVVeFc0cEw1VlBnc0xQeXZ0cXNwSE9BTEZ0MWZTUWJEbjlqQVdGNnZBcmxZR3RvVXhEdUdNR3VGcUpwaU5BMHJBVnZzVDBmNmxVc3R0SkxXeUtJX05KbGpHUml5SG84S1Q?oc=5",
+      "brief": "赏芦花绽放 赴“红楼”之约 杭州网"
     },
     {
       "source": "杭州日报",
       "cat": "杭州",
-      "title": "本周六吴山广场 杭州城管开放日“邀你来”！ - https://www.hzsc.com.cn/",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9Cb3F1djN5M3hvSFU4eGFoZTk1RXZkN2ptVDBxS0xySzh3X0NNM1l2QktFRDJNV3NUSlEtaWdGcXhuZlYzZ2pRWHdfQ3lPOGVDeFhHUGRKSmtxeFZNaHVtUGx3?oc=5",
-      "brief": "本周六吴山广场 杭州城管开放日“邀你来”！ https://www.hzsc.com.cn/"
+      "title": "美国白宫附近一街区发生多起枪击事件 4人中枪 - Sohu",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZm5mZTdJQW1LSnF4M1dvcl9MaXU3RF9IU3Q2bEt3aGU5OGp2cnQyLWFsN3VXby1qT1lPT0NHdERfX0ZIQjJjTFMtTGRsd2RtLVV6UmF1Sk5XZnRlanlkelJ2SEVqVHF5azFMd3BwY0tWam5IMkFvMDdDV1MwdFhNY0dFNmRCV09xS2FRdw?oc=5",
+      "brief": "美国白宫附近一街区发生多起枪击事件 4人中枪 Sohu"
     },
     {
       "source": "杭州本地宝",
       "cat": "杭州生活",
-      "title": "🥵冷空气“冻”真格！杭州今日最低气温降至7℃！局部地区甚至0℃ - 凤凰网",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9lSXpEdjBaMlhlc1NXWHdnY2VQV3E1TEphVXh6cW9zUzlxNU00Q21mR0lRYURCeGNxT0RsQUQydm5zNldVOUVUSjRKWTc?oc=5",
-      "brief": "🥵冷空气“冻”真格！杭州今日最低气温降至7℃！局部地区甚至0℃ 凤凰网"
+      "title": "2026全国最新结婚、离婚登记数公布 - 凤凰网",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBkMi1oeVY4dnctSWJwNkkxd3l2bEZ5VXdoU1hfb2d0NnpFeFJpMEx6SzROMEhzSWVNVUNOajY0WG5ZZXNaWVRHWURwdnE?oc=5",
+      "brief": "2026全国最新结婚、离婚登记数公布 凤凰网"
     },
     {
       "source": "BAT观察",
       "cat": "互联网",
-      "title": "独家｜腾讯管理层再谈AI：一半人要提效做好现有核心业务，另一半探索AI Native，“裁员50%”不实 - ThePaper.cn",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0tNi1aQ0pyX3NCSUk0ak5yY0k0cEIzaDYwUW55Q0xaSFFRa3lZZDVpU0NrODBZNlYtVTZZM1JoZnRZakdVVmpjUUVzVkloWk1zWVJrRG5CWkIzR0FuSWNKTA?oc=5",
-      "brief": "独家｜腾讯管理层再谈AI：一半人要提效做好现有核心业务，另一半探索AI Native，“裁员50%”不实 ThePaper.cn"
+      "title": "百度世界2026 聚焦人工智能 驱动组织进化 - 人民日报",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9CaEUyVDg0UlM4Z3ZpTU5IVTg3d0FHVUtjb0V4WXVQdncwX1oyMGpncFZ6QnpFVlU4ZEtyMzd2Zk91MFRLZUhWMDl5c1oxUHdBQzdUclJpU3g1d1F1Vm1HbFdaODNMbmdxNEphSkIzUUZyOHctVXY5YUxodnFXN2s?oc=5",
+      "brief": "百度世界2026 聚焦人工智能 驱动组织进化 人民日报"
     },
     {
       "source": "BAT观察",
       "cat": "互联网",
-      "title": "知情人士称“腾讯裁员50%”误读，管理层强调要重新调度公司资源 - Sohu",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNOUlrSmZXTkUzek1VLXhsbEQxV0pFak04MmxDbGNSSmZhQjF6WnJKR1RqbkFjOTZtOW1OYkhidGZ0VU9zQVo1NV8zVWVMdUdtdUFlbHZxRHp0RGZ0WDFoa0EtamFncTE5T0NLdlRqUWJwLVRvWHR1dmVqRG96VzVmcFl4dXZTc0pV?oc=5",
-      "brief": "知情人士称“腾讯裁员50%”误读，管理层强调要重新调度公司资源 Sohu"
+      "title": "百度发布两款应用模型，李彦宏：会持续研发基础大模型 - 科学网—新闻",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA5bk5XT2RaQjl5Q3BmeW9rRF9HVWpOMS1TWk9Hb0ItYzF2YVRPc1RqYm9takFZYTd1MHI3WjBkQ0RRSHJmYnMxNGRyNUdKdnNJaExSMWlQcFl0SjFpOTZyR3RUakg2Zw?oc=5",
+      "brief": "百度发布两款应用模型，李彦宏：会持续研发基础大模型 科学网—新闻"
     },
     {
       "source": "BAT观察",
       "cat": "互联网",
-      "title": "确认！阿里巴巴芯片公司平头哥已递交上市申请 - 财联社",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5tdTFfOFc1a0E2bUZaVEthbGxfbXdrc3FEWklWbUlnM2UyZHIwQ2lBT2YzSjVNUV9CR3RkbXRxdWNwaFhxeHl4Sg?oc=5",
-      "brief": "确认！阿里巴巴芯片公司平头哥已递交上市申请 财联社"
+      "title": "一图展望丨中概互联网Q3财报季开启！腾讯、阿里、拼多多、快手等下周密集放榜，阿里、美团利润望翻倍 - 东方财富",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBGcFE0cm1xcHVnSGthM2h3OTVTaFJYTTcyUDNKRGpLZEJSRWlqZFh0bDVLTWFTUmo1YUZqdHkyMEltRzB6VHVUUHJpSWJWeHI1S09Lakcyem9ZbTBYNDg5M3N0NjROdw?oc=5",
+      "brief": "一图展望丨中概互联网Q3财报季开启！腾讯、阿里、拼多多、快手等下周密集放榜，阿里、美团利润望翻倍 东方财富"
     },
     {
       "source": "中国新闻网",
       "cat": "综合",
-      "title": "商务部：中欧医疗器械专场贸易对接会达成合作意向超100项",
-      "url": "https://www.chinanews.com.cn/cj/2026/11-12/10730837.shtml",
-      "brief": "中新网11月12日电 商务部新闻发言人何亚东在12日举行的例行新闻发布会上介绍称，在进博会期间举办中欧医疗器械专场贸易对接会，是中欧贸易投资磋商机制第二次例会的一项重要成果共识。商务部会同财政部和国家卫健委等部门组织了160多家国内医疗机构和企业参与市场化采购，欧方组织了40多家医疗器械企业参会，达"
+      "title": "“太空AI第一股”国星宇航在港上市 孙东：体现香港“双赋能”优势",
+      "url": "https://www.chinanews.com.cn/cj/2026/11-13/10731506.shtml",
+      "brief": "中新社香港11月13日电 (记者 戴小橦)有“太空AI第一股”之称的成都国星宇航科技股份有限公司(简称“国星宇航”)13日在香港交易及结算所有限公司(简称“港交所”)主板挂牌。香港特区政府创新科技及工业局局长孙东出席上市仪式时表示，国星宇航已和香港科技园公司签署合作协议，将在香港设立国际总部和研发中"
     },
     {
       "source": "中国新闻网",
       "cat": "综合",
-      "title": "无人机高空坠箭猎杀野生动物 起底盗猎装备网购灰色链条",
-      "url": "https://www.chinanews.com.cn/fz/2026/11-12/10730836.shtml",
-      "brief": "法治在线丨无人机高空坠箭猎杀野生动物 起底盗猎装备网购灰色链条"
+      "title": "祖国腾飞，我奋飞——从八一飞行表演队多彩航迹看人民空军精神风貌",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-13/10731516.shtml",
+      "brief": "今年2月，空军八一飞行表演队在第十届新加坡航展进行飞行表演。朱姜海摄 危立平"
     },
     {
       "source": "中国新闻网",
       "cat": "综合",
-      "title": "商务部：第十届进博会的筹备工作已启动",
-      "url": "https://www.chinanews.com.cn/cj/2026/11-12/10730833.shtml",
-      "brief": "中新网11月12日电 商务部新闻发言人何亚东12日表示，目前，第十届进博会的筹备工作已经启动。"
+      "title": "上海出台首部科学数据管理专项文件",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-13/10731498.shtml",
+      "brief": "中新社上海11月13日电 (记者 郑莹莹)上海市科学技术委员会、上海市数据局13日联合对外发布《上海市科学数据管理办法(试行)》，这是上海出台的第一部专门规范科学数据管理的政府文件。"
     }
   ],
   "status": {
